@@ -1,0 +1,95 @@
+<html>
+<head>
+	<title>Sign up form</title>
+	<style>
+		#grad1 {
+			background-image: linear-gradient(to right,rgb(0,85,255),rgb(0,0,128));
+		}
+		h1 {
+			margin-top: 40px;
+			margin-bottom: 0px;
+			font-size: 40px;
+			font-family: sans-serif;
+			color: white;
+			margin-bottom: 70px;
+		}
+		#inp1 ,#inp2 ,#inp3 ,#inp4 ,#inp5{
+			margin-top: 8px;
+			margin-left: 550px;
+			height: 40px;
+			width: 350px;
+			font-size: 22px;
+		}
+		label {
+			margin-top: 50px;
+			margin-left: 550px;
+			color: white;
+			font-size: 20px;
+		}
+		#login {
+			margin-top: 20px;
+			margin-left: 440px;
+			border-radius: 5px 5px 5px 5px;
+			border-color: black;
+			border-width: thin;
+			background-color: whitesmoke;
+			color: black;
+			font-size: 20px;
+			padding: 8px 70px;
+		}
+		#sign {
+			margin-top: 20px;
+			margin-left: 150px;
+			border-radius: 5px 5px 5px 5px;
+			border-color: black;
+			border-width: thin;
+			background-color: whitesmoke;
+			color: black;
+			font-size: 20px;
+			padding: 8px 70px;
+		}
+	</style>
+</head>
+<body id="grad1">
+	<center>
+		<h1>Create New Account</h1>
+	</center>
+	<label for inp1>First Name :</label>
+	<br>
+	<input type="text" id="inp1" placeholder="ABC">
+	<br><br><br>
+	<label for inp2>Last Name :</label>
+	<br>
+	<input type="text" id="inp2" placeholder="DEF">
+	<br><br><br>
+	<label for inp3>Email :</label>
+	<br>
+	<input type="text" id="inp3" placeholder="abc@xyz.com">
+	<br><br><br>
+	<label for inp4>Date of Birth :</label>
+	<br>
+	<input type="Date" id="inp4">
+	<br><br><br>
+	<label for inp5>Phone Number :</label>
+	<br>
+	<input type="text" id="inp5" placeholder="12345-67890">
+	<br><br><br>
+	<a href="index2.html"><button id="login" onclick="credentials()">Submit</button></a>
+	<a href="index.html"><button id="sign">Go Back</button></a>
+	<script>
+		function credentials(){
+		var a=document.getElementById("inp1").value;
+		var b=document.getElementById("inp2").value;
+		var c=document.getElementById("inp3").value;
+		var d=document.getElementById("inp4").value;
+		var e=document.getElementById("inp5").value;
+		alert("Username: "+a+"\n"+"Password: "+b);
+		localStorage["user"]=a;
+		localStorage["lastname"]=b;
+		localStorage["email"]=c;
+		localStorage["pass"]=d;
+		localStorage["no"]=e;
+		}
+	</script>
+</body>
+</html>

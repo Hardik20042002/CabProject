@@ -1,0 +1,93 @@
+<html>
+<head>
+	<title>Login form</title>
+	<style>
+		#grad1 {
+			background-image: linear-gradient(to right,rgb(0,85,255),rgb(0,0,128));
+		}
+		h1 {
+			margin-top: 50px;
+			margin-bottom: 0px;
+			font-size: 40px;
+			font-family: sans-serif;
+			color: white;
+			margin-bottom: 100px;
+		}
+		#inp1 ,#inp2{
+			margin-top: 8px;
+			margin-left: 550px;
+			height: 40px;
+			width: 350px;
+			font-size: 25px;
+		}
+		label {
+			margin-top: 50px;
+			margin-left: 550px;
+			color: white;
+			font-size: 20px;
+		}
+		#login {
+			margin-top: 20px;
+			margin-left: 440px;
+			border-radius: 5px 5px 5px 5px;
+			border-color: black;
+			border-width: thin;
+			background-color: whitesmoke;
+			color: black;
+			font-size: 20px;
+			padding: 8px 70px;
+		}
+		#sign {
+			margin-top: 20px;
+			margin-left: 150px;
+			border-radius: 5px 5px 5px 5px;
+			border-color: black;
+			border-width: thin;
+			background-color: whitesmoke;
+			color: black;
+			font-size: 20px;
+			padding: 8px 70px;
+		}
+		#check {
+			border-radius: 5px 5px 5px 5px;
+			border-color: black;
+			border-width: thin;
+			background-color: whitesmoke;
+			color: black;
+			font-size: 20px;
+			padding: 8px 70px;
+		}
+	</style>
+</head>
+<body id="grad1">
+	<center>
+		<h1>Login to Your Cab Account</h1>
+	</center>
+	<br>
+		<label for inp1>Username :</label>
+		<br>
+		<input type="text" id="inp1" placeholder="John">
+		<br><br><br><br><br>
+		<label for inp2>Password :</label>
+		<br>
+		<input type="Password" id="inp2" placeholder="•••••••••">
+		<br><br><br><br><br>
+		<center><button id="check" onclick="check()">Check</button></center>
+		<a href="index4.html"><button id="login">Login</button></a>
+		<a href="index3.html"><button id="sign">Sign up</button></a>
+		<script>
+			function check(){
+				var a=document.getElementById("inp1").value;
+				var b=document.getElementById("inp2").value;
+				if(a===localStorage["user"]&&b===localStorage["pass"]){
+					alert("Press Login to continue");
+				}
+				else{
+					alert("INVALID CREDENTIALS");
+					document.getElementById("inp1").value="";
+					document.getElementById("inp2").value="";
+				}
+			}
+		</script>
+</body>
+</html>

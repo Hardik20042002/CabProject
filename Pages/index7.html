@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>Confirm page</title>
+	<style>
+		#grad1 {
+			background-image: linear-gradient(to right,rgb(0,85,255),rgb(0,0,128));
+		}
+		h1 {
+			margin-top: 40px;
+			margin-bottom: 0px;
+			font-size: 40px;
+			font-family: sans-serif;
+			color: white;
+			margin-bottom: 70px;
+		}
+		textarea {
+			font-size: 25px;
+			color: black;
+		}
+		#RateYourRide {
+			margin-top: 20px;
+			margin-left: 380px;
+			border-radius: 5px 5px 5px 5px;
+			border-color: black;
+			border-width: thin;
+			background-color: whitesmoke;
+			color: black;
+			font-size: 20px;
+			padding: 8px 70px;
+		}
+		#CancelRide {
+			margin-top: 20px;
+			margin-left: 150px;
+			border-radius: 5px 5px 5px 5px;
+			border-color: black;
+			border-width: thin;
+			background-color: whitesmoke;
+			color: black;
+			font-size: 20px;
+			padding: 8px 70px;
+		}
+	</style>
+</head>
+<body id="grad1">
+	<center>
+		<h1>Booking Confirmed !</h1>
+		<textarea id="details" rows="12" cols="60"></textarea>
+	</center>
+	<br><br><br>
+	<a href="index8.html"><button id="RateYourRide" onclick="rate()">Rate Your Ride</button></a>
+	<a href="index8.html"><button id="CancelRide" onclick="feed()">Cancel Ride</button></a>
+	<script>
+		var name=localStorage["user"];
+		document.getElementById("details").value="Dear "+name+" Your drive is on the way.\n\n\nDriver name: John Fernandez\nCar Number: DL 7C 13 1260\nDriver Ph No.: 8654386082";
+		function feed(){
+			alert("Dear "+name+" ,your ride has been canceled.\nPlease help us improve our services by giving Feedback.");
+		}
+		function rate(){
+			alert("Thanks for choosing our services");
+		}
+	</script>
+</body>
+</html>

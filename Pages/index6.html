@@ -1,0 +1,154 @@
+<html>
+<head>
+	<title>Sign up form</title>
+	<style>
+		#grad1 {
+			background-image: linear-gradient(to right,rgb(0,85,255),rgb(0,0,128));
+		}
+		h1 {
+			margin-top: 40px;
+			margin-bottom: 0px;
+			font-size: 40px;
+			font-family: sans-serif;
+			color: white;
+			margin-bottom: 110px;
+		}
+		label {
+			margin-top: 50px;
+			margin-left: 50px;
+			color: white;
+			font-size: 30px;
+		}
+		#inp1 ,#inp2 ,#inp3 ,#inp4 ,#inp5{
+			margin-top: 8px;
+			margin-left: 50px;
+			height: 40px;
+			width: 350px;
+			font-size: 22px;
+			border-color: black;
+			color: black;
+			padding-left: 10px;
+		}
+		#Ok {
+			margin-top: 20px;
+			margin-left: 50px;
+			border-radius: 5px 5px 5px 5px;
+			border-color: black;
+			border-width: thin;
+			background-color: whitesmoke;
+			color: black;
+			font-size: 20px;
+			padding: 6px 70px;
+		}
+		#Cancel {
+			margin-left: 130px;
+			border-radius: 5px 5px 5px 5px;
+			border-color: black;
+			border-width: thin;
+			background-color: whitesmoke;
+			color: black;
+			font-size: 20px;
+			padding: 6px 70px;
+		}
+		#map {
+			margin-right: 30px;
+			border-width: thick;
+			border-color: black;
+		}
+	</style>
+</head>
+<body id="grad1">
+	<center>
+		<h1>Confirm your Details</h1>
+	</center>
+	<img id="map" src="https://github.com/Hardik20042002/CabProject/blob/main/Assets/Intoimg.png?raw=true" alt="CAB BOOKING SERVICES" align="right" height="500" width="600">
+	<label for inp1>Pickup Location :</label>
+	<br>
+	<input type="text" id="inp1">
+	<br>
+	<label for inp2>Destination :</label>
+	<br>
+	<input type="text" id="inp2">
+	<br>
+	<label for inp3>Distance(Km) :</label>
+	<br>
+	<input type="text" id="inp3">
+	<br>
+	<label for inp4>Price :</label>
+	<br>
+	<input type="text" id="inp4">
+	<br>
+	<label for inp5>Vehicle Type :</label>
+	<br>
+	<input type="text" id="inp5">
+	<br><br><br><br><br>
+	<a href="index7.html"><button id="Ok">Ok</button></a>
+	<a href="index4.html"><button id="Cancel">Cancel</button></a>
+	<script>
+        	document.getElementById("inp1").value=localStorage["pick"];
+        	document.getElementById("inp2").value=localStorage["dr"];
+        	document.getElementById("inp3").value=localStorage["dist"];
+        	document.getElementById("inp4").value=localStorage["cost"];
+        	document.getElementById("inp5").value=localStorage["Vehicle"];
+        	var pickup=localStorage["pick"];
+        	var drop=localStorage["dr"];
+        	var map=document.getElementById("map");
+        	if(pickup=="Anand Vihar"){
+				if(drop=="Connaught Place"){
+					map.src="https://github.com/Hardik20042002/CabProject/blob/main/Assets/anandviharconnaughtplace.jpeg?raw=true";
+				}
+				else if(drop=="Rajiv Chowk"){
+					map.src="https://github.com/Hardik20042002/CabProject/blob/main/Assets/anandviharrajicchowk.jpeg?raw=true";
+				}
+				else if(drop=="Akshardham"){
+					map.src="https://github.com/Hardik20042002/CabProject/blob/main/Assets/anandviharakshardham.jpg?raw=true";
+				}
+				else if(drop=="India Gate"){
+					map.src="https://github.com/Hardik20042002/CabProject/blob/main/Assets/anandviharindiagate.jpeg?raw=true";
+				}
+			}
+			else if(pickup=="Pandav Nagar"){
+				if(drop=="Connaught Place"){
+					map.src="https://github.com/Hardik20042002/CabProject/blob/main/Assets/pandavnagarconnaughtplace.jpeg?raw=true";
+				}
+				else if(drop=="Rajiv Chowk"){
+					map.src="https://github.com/Hardik20042002/CabProject/blob/main/Assets/pandavnagarrajivchowk.jpeg?raw=true";
+				}
+				else if(drop=="Akshardham"){
+					map.src="https://github.com/Hardik20042002/CabProject/blob/main/Assets/pandavnagarakshardham.jpeg?raw=true";
+				}
+				else if(drop=="India Gate"){
+					map.src="https://github.com/Hardik20042002/CabProject/blob/main/Assets/pandavnagarindigate.jpeg?raw=true";
+				}
+			}
+			else if(pickup=="Kaushambi"){
+				if(drop=="Connaught Place"){
+					map.src="https://github.com/Hardik20042002/CabProject/blob/main/Assets/kaushambiconnaughtplace.jpeg?raw=true";
+				}
+				else if(drop=="Rajiv Chowk"){
+					map.src="https://github.com/Hardik20042002/CabProject/blob/main/Assets/kaushambirajivchowk.jpeg?raw=true";
+				}
+				else if(drop=="Akshardham"){
+					map.src="https://github.com/Hardik20042002/CabProject/blob/main/Assets/kaushambiakshardham.jpeg?raw=true";
+				}
+				else if(drop=="India Gate"){
+					map.src="https://github.com/Hardik20042002/CabProject/blob/main/Assets/kaushambiindiagate.jpeg?raw=true";
+				}
+			}
+			else if(pickup=="Inirapuram"){
+				if(drop=="Connaught Place"){
+					map.src="https://github.com/Hardik20042002/CabProject/blob/main/Assets/indirapuramconnaughtplace.jpeg?raw=true";
+				}
+				else if(drop=="Rajiv Chowk"){
+					map.src="https://github.com/Hardik20042002/CabProject/blob/main/Assets/indirapuramrajivchowk.jpeg?raw=true";
+				}
+				else if(drop=="Akshardham"){
+					map.src="https://github.com/Hardik20042002/CabProject/blob/main/Assets/indirapuramakshardham.jpeg?raw=true";
+				}
+				else if(drop=="India Gate"){
+					map.src="https://github.com/Hardik20042002/CabProject/blob/main/Assets/indirapuramindiagate.jpeg?raw=true";
+				}
+			}
+    </script>
+</body>
+</html>
